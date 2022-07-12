@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.header {
+  position: fixed;
+  top: -122px;
+  left: 0;
+  padding-top: 2.5em;
+  transition: padding-top 0.6s ease-in-out;
+  width: 100%;
+  z-index: 2;
+}
+
+.header.down {
+  background: #fff;
+  padding-top: 2.5em;
+  border-bottom: 1px solid #dcdcdc;
+}
+.header.load {
+  top: 0;
+}
+
+.header.down .header_inner {
+  border-bottom: 2px solid transparent;
+}
+
+.header_inner {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.header_inner .logo img {
+  position: absolute;
+  top: 0.5em;
+  width: 20em;
+  height: auto;
+}
+.logo_colour {
+  opacity: 0;
+}
+
+.logo_white {
+  opacity: 1;
+}
+
+.header.down .logo_colour {
+  opacity: 1;
+}
+
+.header.down .logo_white {
+  opacity: 0;
+}
+
+.header_right {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
+  margin-right: 3em;
+  font-size: 1.3em;
+}
+
+.header_right .hamburger {
+  transform: scale(1.5);
+  padding-bottom: 0.2em;
+  filter: invert(100%);
+  padding-left: 1em;
+  transition: filter 0.2s ease-in-out;
+}
+.lang a {
+  padding-left: 0.3em;
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+.header.down .hamburger {
+  filter: invert(0);
+}
+.header.down .lang a {
+  color: black;
+}
+.lang a:nth-child(1) {
+  opacity: 1;
+}
+.lang a:nth-child(2) {
+  opacity: 0.4;
+}
+
+span {
+  display: none;
+}
+.visual {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(88, 88, 88);
+  z-index: 0;
+}
