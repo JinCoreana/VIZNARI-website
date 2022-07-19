@@ -5,7 +5,7 @@
   top: -122px;
   left: 0;
   padding-top: 2.5em;
-  transition: padding-top 0.6s ease-in-out;
+  transition: padding-top, 0.6s ease-in-out;
   width: 100%;
   z-index: 2;
 }
@@ -57,15 +57,14 @@
 .header_right {
   display: flex;
   justify-content: flex-end;
-  height: 100%;
   align-items: center;
+  height: 100%;
   margin-right: 3em;
   font-size: 1.3em;
 }
 
 .header_right .hamburger {
   transform: scale(1.5);
-  padding-bottom: 0.2em;
   filter: invert(100%);
   padding-left: 1em;
   transition: filter 0.2s ease-in-out;
@@ -76,7 +75,7 @@
   transition: color 0.2s ease-in-out;
 }
 .header.down .hamburger {
-  filter: invert(0);
+  filter: invert(30%);
 }
 .header.down .lang a {
   color: black;
@@ -84,12 +83,88 @@
 .lang a:nth-child(1) {
   opacity: 1;
 }
-.lang a:nth-child(2) {
+.lang a:nth-child(n + 2) {
   opacity: 0.4;
 }
 
-span {
+.nav {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  z-index: 7;
+  bottom: 0;
+  background-color: white;
+  width: 70%;
+
+  transition: right cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.nav.open {
+  right: 0;
+}
+.nav > .nav_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 5em;
+  height: 100%;
+}
+
+.main_title {
+  font-size: 30px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.main_title > span {
   display: none;
+}
+.nav > .nav_inner > li > a {
+  display: block;
+  cursor: none;
+  line-height: 70px;
+  position: relative;
+}
+
+.nav > .nav_inner > li > a:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background: black;
+  bottom: 10px;
+  left: 0;
+}
+
+.sub_title {
+  font-size: 20px;
+  font-weight: 400;
+}
+.sub_title > li {
+  transition: color 0.2s ease-in-out;
+}
+.sub_title > li:hover {
+  color: rgb(255, 187, 0);
+  cursor: pointer;
+}
+
+.close_icon {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  filter: invert(30%);
+}
+.nav_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 4;
+}
+.nav_bg.open {
+  display: auto;
 }
 .visual {
   position: relative;
@@ -97,4 +172,96 @@ span {
   height: 100vh;
   background: rgb(88, 88, 88);
   z-index: 0;
+  overflow: visible;
+}
+
+.vis-images {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vis-images li {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  transition: all 2s;
+  /* opacity: 0; */
+}
+.vis-images li .On {
+  transform: scale(1);
+  opacity: 1;
+}
+.vis-images.vis-01 {
+  background-image: url(../img/mv1.jpg);
+}
+.vis-images > .vis-02 {
+  background-image: url(../img/mv5.jpg);
+}
+.vis-images > .vis-03 {
+  background-image: url(../img/mv6x.jpg);
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  margin-top: 100px;
+  left: 150px;
+  height: 100%;
+  width: 70%;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.text h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.text p {
+  line-height: 30px;
+}
+.btns {
+  margin-top: 20px;
+}
+
+.btns a {
+  cursor: pointer;
+  margin-right: 20px;
+  display: inline-block;
+  width: 180px;
+  line-height: 50px;
+  font-weight: 700;
+  border: 1.5px solid white;
+  padding: 0 20px;
+  color: #dcdcdc;
+  font-size: 20px;
+  transition: background-color 0.5s ease-in-out;
+}
+.btns a span {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 32px;
+  background-image: url(../img/visuBtn_arrow.png);
+  transition: all 0.5s ease-in-out;
+}
+
+.btns a:hover {
+  color: rgba(0, 0, 0, 0.822);
+  background-color: white;
+  opacity: 0.8;
+}
+.btns a span:hover {
+  background-image: url(../img/mvBtn_arrow_ov.png);
 }

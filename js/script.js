@@ -25,4 +25,26 @@ $(function () {
     })
 
 
+{
+    const hamburger=$('.hamburger');
+    const nav = $('.nav')
+    const close_icon=$('.close_icon');
+    const navBg=$('.nav_bg')
+
+    hamburger.click(function(e){
+        e.preventDefault();
+        nav.addClass('open')
+        navBg.fadeIn(300)
+    })
+
+    close_icon.click(function(e){
+        e.preventDefault();
+        nav.removeClass('open')
+        navBg.fadeOut(300)
+    })
+
+
+}
+
+
 })
