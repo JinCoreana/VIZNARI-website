@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-.blind{
-  display:none;
+.blind {
+  display: none;
 }
 html {
   height: 100%;
@@ -15,7 +15,7 @@ body {
   color: #333;
   line-height: 1.6;
   font-size: 16px;
-  font-family: 'El Messiri', sans-serif;
+  font-family: "El Messiri", sans-serif;
   word-break: break-all;
   word-wrap: break-word;
   word-break: keep-all;
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'El Messiri', sans-serif;
+  font-family: "El Messiri", sans-serif;
 }
 
 body,
@@ -100,7 +100,7 @@ ul {
 
 q:before,
 q:after {
-  content: '';
+  content: "";
 }
 
 table {
@@ -144,7 +144,7 @@ textarea {
   color: #555;
   line-height: 19px;
   font-size: 13px;
-  font-family:'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   vertical-align: middle;
 }
 
@@ -161,7 +161,6 @@ select {
   background-position: calc(100% - 15px) center;
   background-position: -webkit-calc(100% - 15px) center;
   background-position: -moz-calc(100% - 15px) center;
-
 }
 
 select::-ms-expand {
@@ -188,7 +187,6 @@ a[href^="tel"] {
   /* Remove underline. */
   /* Additional css `propery: value;` pairs here */
 }
-
 
 button,
 input[type="button"],
@@ -262,8 +260,6 @@ textarea:-ms-input-placeholder {
   color: #a0a0a0;
 }
 
-
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -296,11 +292,6 @@ a,
 button {
   -o-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-tap-highlight-color: rgba(0, 0, 0, 0);
-  -moz-tap-highlight-color rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-
-
-
-
