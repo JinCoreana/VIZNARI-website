@@ -1,5 +1,10 @@
 @charset "utf-8";
-
+@media screen and (max-width: 1800px) {
+  .allMenuWrap {
+    right: -1083px;
+    width: 1083px;
+  }
+}
 .only-mobile {
   display: none;
 }
