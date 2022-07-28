@@ -282,12 +282,15 @@
     position: relative;
     height: 60rem;
   }
+  .vis-images {
+    left: -300px;
+  }
   .visual::before {
     content: "";
     top: 0;
     left: 0;
     position: absolute;
-    opacity: 0.8;
+    opacity: 0.5;
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, black, transparent);
@@ -297,15 +300,7 @@
     margin: 0;
   }
   .vis-buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-direction: row;
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 90%;
-    height: 100%;
+    display: none;
   }
   .text h1 {
     font-weight: 700;
@@ -327,7 +322,7 @@
   }
   .arrow.down {
     opacity: 0.5;
-    transform: translateY(25px);
+    transform: translateY(160px);
     animation: scroll 1s ease-in-out infinite;
   }
 
@@ -353,7 +348,7 @@
     width: 85%;
     min-width: 285px;
     overflow-wrap: normal;
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
   }
   .btns a {
     cursor: pointer;
